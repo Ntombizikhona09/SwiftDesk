@@ -1,0 +1,179 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+/* Technician Panel Wrapper */
+.technician-panel {
+  display: flex;
+  height: 100vh;
+  width: 1300px;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 80px; 
+  margin-top: 40px;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 0;
+  border-radius: 20px;
+}
+
+
+.sidebar-icon {
+  font-size: 30px;
+  margin-bottom: 24px;
+  cursor: pointer;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.sidebar-icon:hover {
+  color: #189e72; /* Change color on hover */
+  transition: 0s.3s ease-in-out; /* Remove transition on hover */
+  transform: scale(1.2); /* Scale up icon on hover */
+}
+
+.sidebar:hover .sidebar-icon {
+  margin-left: 10px; /* Space icons out when expanded */
+}
+
+.sidebar-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  margin-left: 10px;
+  display: none;
+}
+
+.sidebar:hover .sidebar-title {
+  display: block; /* Show titles on hover */
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 24px;
+  background-color: rgba(66, 66, 66, 0.842);
+  max-width: 1600px;
+  margin-top: 40px;
+  margin-left: 20px; 
+  margin-right: 24px;
+  border-radius: 8px;
+}
+
+/* Messages */
+.message-box {
+  padding: 16px;
+  margin-bottom: 10px;
+  background-color: #f3f3f3;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  color: black; 
+}
+
+.message-box:hover {
+  background-color: #838383;
+}
+
+/* Chat Window */
+.chat-window {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 450px;
+  background-color: rgb(128, 128, 128);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  border: 1px solid #55b10a;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  color: black; 
+}
+
+.chat-input {
+  width: 100%;
+  margin-top:5px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.close-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.send-button {
+  background-color: #007bff;
+  color: rgb(0, 0, 0);
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.send-button:hover {
+  background-color: #0bd63e;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .technician-panel {
+    flex-direction: column; /* Stack sidebar and content on smaller screens */
+  }
+
+  .sidebar {
+    width: 100%;
+    height: 60px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  .main-content {
+    margin-top: 20px;
+    padding: 16px;
+    width: 100%;
+  }
+
+ /* Chat Window */
+ /* Chat Window */
+ .chat-window {
+  position: fixed;
+  bottom: 20px;
+  left: 20px; /* Moves the chat window to the left side */
+  width: 350px;
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  z-index: 9999; /* Ensures it stays on top */
+}
+
+
+
+
+
+  .sidebar-title {
+    display: none;
+  }
+}
