@@ -100,7 +100,7 @@ const Messages = () => {
         <h2 className="logo">Messages</h2>
         <nav>
           <ul>
-            <li><a href="/technician-dashboard">Dashboard</a></li>
+           
             <li><a href="/messages">Messages</a></li>
             <li><a onClick={logOut}>Log Out</a></li>
           </ul>
